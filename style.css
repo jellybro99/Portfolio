@@ -1,0 +1,174 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    --color1: #a7c957;
+    --color2: #ffffff;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Comic Sans MS", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    background-color:var(--color2);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+a, a:visited, a:hover, a:active {
+    color:inherit;
+}
+
+.shadow {
+    box-shadow: rgb(0, 0, 0, 0.2) 2px 2px 10px 2px
+}
+
+a {
+    display:block;
+}
+
+header {
+    padding: 5%;
+    position: relative;
+    background-color: var(--color1);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.blurb {
+    background-color: var(--color2);
+    padding: 5%;
+    display:flex;
+    flex-direction:column;
+    min-height:fit-content;
+    gap:2rem;
+}
+
+main {
+    padding: 5%;
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    justify-content: center;
+}
+
+main > h1 {
+    grid-column: 1 / -1;
+}
+
+.project {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+    .project:hover {
+        box-shadow: rgb(0, 0, 0, 0.25) 4px 4px 10px 2px
+    }
+
+.project > img {
+    width:100%;
+    height:auto;
+}
+
+.project-info {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project > p {
+    padding: 10px;
+}
+
+.links {
+    display:flex;
+    gap:0.5rem;
+}
+
+footer {
+    padding: 5%;
+    background-color: var(--color1);
+    min-height: contain;
+    box-shadow: 0 50vh 0 50vh var(--color1);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:2rem;
+}
+
+.space {
+    padding-right:.5rem;
+}
+
+.links{
+    font-size: 1.5rem;
+}
+
+header > img, footer > img {
+    z-index:1;
+}
+
+header > div:first-child {
+    
+}
+
+@media (max-width:500px){
+
+    footer .links, header .links {
+        justify-content: center;
+    }
+
+    footer, main, .blurb, header {
+        /*padding: */
+    }
+}
+
+@media (min-width:500px) and (max-width:1000px) {
+
+    header .links {
+        justify-content:flex-end;
+    }
+
+    footer, main, .blurb, header {
+        /*padding: */
+    }
+}
+
+@media (min-width: 1000px) {
+
+    header {
+        align-items: center;
+    }
+    
+    header .links {
+        justify-content: flex-end;
+    }
+
+    header, footer {
+        flex-direction: row;
+    }
+
+    footer, main, .blurb, header {
+        /*padding: */
+    }
+}
