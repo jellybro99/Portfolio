@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -10,71 +12,90 @@
 
 body {
     line-height: 1.5;
-    font-family: "Comic Sans MS", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Comic Sans MS", system-ui, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
     -webkit-font-smoothing: antialiased;
-    background-color:var(--color2);
+    background-color: var(--color2);
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
     isolation: isolate;
 }
 
-a, a:visited, a:hover, a:active {
-    color:inherit;
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
 }
 
 .shadow {
-    box-shadow: rgb(0, 0, 0, 0.2) 2px 2px 10px 2px
+    box-shadow: rgb(0, 0, 0, 0.2) 2px 2px 10px 2px;
 }
 
 a {
-    display:block;
+    display: block;
 }
 
 header {
     padding: 5%;
     position: relative;
     background-color: var(--color1);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header img {
-width:800px;
+    width: 800px;
 }
 
 footer img {
-    height:800px;
+    height: 800px;
 }
 
 .blurb {
     background-color: var(--color2);
-    
+
     padding: 5%;
-    display:flex;
-    flex-direction:column;
-    min-height:fit-content;
-    gap:2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+    gap: 2rem;
 }
 
 main {
     padding: 5%;
     display: grid;
-    gap:10px;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
     justify-content: center;
 }
@@ -84,18 +105,17 @@ main > h1 {
 }
 
 .project {
-    
     display: flex;
     flex-direction: column;
 }
 
-    .project:hover {
-        box-shadow: rgb(0, 0, 0, 0.25) 4px 4px 10px 2px
-    }
+.project:hover {
+    box-shadow: rgb(0, 0, 0, 0.25) 4px 4px 10px 2px;
+}
 
 .project > img {
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
 }
 
 .project-info {
@@ -110,8 +130,8 @@ main > h1 {
 }
 
 .links {
-    display:flex;
-    gap:0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 footer {
@@ -122,32 +142,31 @@ footer {
 
 .contact {
     box-shadow: 0 50vh 0 50vh var(--color1);
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .space {
-    padding-right:.5rem;
+    padding-right: 0.5rem;
 }
 
-.links{
+.links {
     font-size: 1.5rem;
 }
 
 header > img {
-    z-index:1;
+    z-index: 1;
 }
 
 header > div:first-child {
-    
 }
 
-@media (max-width:500px){
-
-    footer .links, header .links {
+@media (max-width: 500px) {
+    footer .links,
+    header .links {
         justify-content: center;
     }
 
@@ -155,32 +174,36 @@ header > div:first-child {
         align-items: center;
     }
 
-    footer, main, .blurb, header {
+    footer,
+    main,
+    .blurb,
+    header {
         /*padding: */
     }
 }
 
-@media (min-width:500px) and (max-width:1000px) {
-
+@media (min-width: 500px) and (max-width: 1000px) {
     header .links {
-        justify-content:flex-end;
+        justify-content: flex-end;
     }
 
     header {
         align-items: center;
     }
 
-    footer, main, .blurb, header {
+    footer,
+    main,
+    .blurb,
+    header {
         /*padding: */
     }
 }
 
 @media (min-width: 1000px) {
-
     header {
         align-items: center;
     }
-    
+
     header .links {
         justify-content: flex-end;
     }
@@ -189,7 +212,10 @@ header > div:first-child {
         flex-direction: row;
     }
 
-    footer, main, .blurb, header {
+    footer,
+    main,
+    .blurb,
+    header {
         /*padding: */
     }
 }
